@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
+
+/* RESET */
+*{ margin:0; padding:0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+
+.animarValor{
+    animation-name: valor;
+    animation-duration: .15s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+
+
+
+@keyframes valor{
+    0%{  background: #ccc;}
+    50%{ background: #fff;}
+    100%{background: #ccc;}
+}
+
+
+.animarBotao{
+    animation-name: botao;
+    animation-duration: .15s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes botao{
+    0%{ 
+        transform: translateY(-5px);
+        box-shadow: 0 5px 1px #171717;
+        border-top: 1px solid #cccccc2e !important;
+        border-left: 1px solid #cccccc2e !important;
+    }
+    100%{
+        transform: translateY(0);
+        box-shadow: 0 0 1px #171717;
+        border: none !important;
+    }
+}
+
+
+.btn{
+    cursor: pointer;
+    transition: .12s ease-in-out;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 1px #171717;
+    user-select: none;
+    font-size: 1.62rem;
+    text-transform: uppercase;
+    border-top: 1px solid #cccccc2e !important;
+    border-left: 1px solid #cccccc2e !important;
+}
+.btn:active{
+    transform: translateY(0);
+    box-shadow: 0 0 1px #171717;
+    border: none !important;
+}
+
+#calculadora{
+    margin: 0 auto;
+    margin-top: 30px;
+    background: #333;
+    width: 300px;
+    height: fit-content;
+    border-radius: 7px;
+    padding: 8px;
+    padding-bottom: 0;
+    box-shadow: 0 5px 10px #171717;
+}
+
+#calculadora *{
+    border-radius: inherit;
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    background: #ccc;
+    margin-bottom: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 8px;
+    font-size: 2rem;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    box-shadow: 0 0 6px black inset;
+}
+
+main{
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    width: 100%;
+    height: calc(100% - 50px);
+}
+
+.limpar{
+    height: 50px;
+    width: 100%;
+    color: #fff;
+    border: 2px solid transparent;
+    display: grid;
+    place-items: center;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+main .numeros{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 2px;
+    height: fit-content;
+    justify-content: flex-end
+}
+
+main .numeros div{
+    border: 2px solid transparent;
+    width: 30%;
+    height: 60px;
+    margin: 0 auto;
+    color: #fff;
+    margin-bottom: 8px;
+    display: grid; place-items: center;
+    cursor: pointer;
+}
+
+main .operacoes{
+    display:flex;
+    flex-direction: column;
+    gap:2px;
+    align-items: flex-end;
+}
+
+main .operacoes .operacao{
+    width: calc(100% - 8px);
+    height: 60px;
+    background: #555;
+    /* margin: 0 auto; */
+    border: 2px solid transparent;
+    cursor: pointer;
+    color: black;
+    display: grid;
+    place-items: center;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+
+[data-ultimo]{
+    margin-left: 0 !important;
+    margin-right: 4px !important;
+}
+
+.calcular{
+    background: #3db185;
+    margin-left: 2px !important;
+    margin-right: 2px !important;
+}

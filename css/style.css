@@ -32,8 +32,8 @@
     0%{ 
         transform: translateY(-5px);
         box-shadow: 0 5px 1px #171717;
-        border-top: 1px solid #cccccc2e !important;
-        border-left: 1px solid #cccccc2e !important;
+        border-top: 1px solid #cccccc2e;
+        border-left: 1px solid #cccccc2e;
     }
     100%{
         transform: translateY(0);

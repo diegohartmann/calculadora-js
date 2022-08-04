@@ -19,7 +19,7 @@ export const teclado = () => {
             incrementarValor(botaoSolto.getAttribute('data-val'));
         }else if(botaoSolto?.getAttribute('data-inputs').split('#').includes('enter')){
             setarValor( eval(valor.innerText) );
-        }else if(e.key === 'Escape'){
+        }else if(botaoSolto?.getAttribute('data-inputs').split('#').includes('escape')){
             setarValor('0')
         }
     })

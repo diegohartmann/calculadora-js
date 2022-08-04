@@ -40,15 +40,16 @@ export const teclado = () => {
     window.addEventListener('keypress', e => {
         const botaoApertado = pegarBotaoPeloEvento(e) 
         botaoApertado?.classList.add("animarBotao")
+        console.log(e.key)
     })
     
     window.addEventListener('keyup', e => {
         const botaoSolto = pegarBotaoPeloEvento(e)
         botaoSolto?.classList.remove("animarBotao")
 
-        if(getarbotoesParaEscrever().includes(botaoSolto)){
-            incrementarValor(e.key);
-        }else if(botaoSolto.getAttribute('data-inputs').split('#').includes('enter')){
+        if(getarbotoesParaEscrever()?.includes(botaoSolto)){
+            incrementarValor(botaoSolto.getAttribute('data-val'));
+        }else if(botaoSolto?.getAttribute('data-inputs').split('#').includes('enter')){
             setarValor( eval(valor.innerText) );
         }
     })

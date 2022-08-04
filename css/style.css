@@ -63,6 +63,7 @@ body > section {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    gap: 1rem;
 }
 .texts h1{
     font-size: 2.5rem;
@@ -72,11 +73,19 @@ body > section {
     /* text-shadow: -4px 3px 0px #007780; /* Firefox 3.5+, Opera 9+, Safari 1+, Chrome, IE10 */
     /* filter: progid:DXImageTransform.Microsoft.Glow(Color=#ffffff,Strength=1); IE<10 */ */
 }
-.texts p{
+
+.texts .icons{
+    display: flex; align-items: center;
     color: #ccc;
+    gap: 1rem;
 }
+.texts .icons i{
+    color: #ccc;
+    font-size: 2rem;
+}
+
 @media only screen and (max-width: 900px){
-    .texts p{
+    .texts .icons{
         display: none;
     }
 }

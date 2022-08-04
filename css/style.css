@@ -5,7 +5,8 @@
     --mont: 'Montserrat', sans-serif;
     --tech: 'Share Tech Mono', monospace;
     --vibes: 'Great Vibes', cursive;
-    --theme: #1dca99;
+    /* --theme: #1dca99; */
+    --theme: #ff6600;;
     --savedTheme: #ff6600;
     --shadow: drop-shadow(0 0 10px #000);
 }

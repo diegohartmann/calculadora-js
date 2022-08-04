@@ -8,7 +8,6 @@ export const teclado = () => {
     window.addEventListener('keydown', e => {
         const botaoApertado = pegarBotaoPeloEvento(e) 
         botaoApertado?.classList.add("animarBotao")
-        console.log(e.key)
     })
     
     window.addEventListener('keyup', e => {

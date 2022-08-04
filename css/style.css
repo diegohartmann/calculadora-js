@@ -10,6 +10,8 @@
     --shadow: drop-shadow(0 0 10px #000);
 }
 
+.hide{ display: none !important }
+
 *{ margin:0; padding:0; box-sizing: border-box; font-family: var(--mont) }
 
 #theme-picker{

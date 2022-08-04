@@ -1,14 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&family=Share+Tech+Mono&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kaushan+Script&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&family=Share+Tech+Mono&display=swap');
 :root{
     --hand: 'Kaushan Script', cursive;
     --mont: 'Montserrat', sans-serif;
     --tech: 'Share Tech Mono', monospace;
-    --theme: #22cb5d;
-    --shadow: drop-shadow(0 0 10px #000)
+    --vibes: 'Great Vibes', cursive;
+    --theme: #1dca99;
+    --shadow: drop-shadow(0 0 10px #000);
 }
 
 *{ margin:0; padding:0; box-sizing: border-box; font-family: var(--mont) }
+
+.vignette {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 200px rgba(0,0,0,0.9) inset;
+  }
 
 .animarValor{
     animation-name: valor;
@@ -26,12 +35,16 @@ body {
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
+    box-shadow: 0 0 10px black inset;
 }
 
 body > section {
     width: 100%;
     height: 100%;
+
     display: flex;
+    /* flex-direction: column; */
+
     background: linear-gradient(45deg, rgb(63 0 79), rgb(163 57 222));
     align-items: center;
     justify-content: space-evenly;
@@ -39,18 +52,33 @@ body > section {
 
 @media only screen and (max-width: 900px){
     body > section {
-        display: flex; 
         flex-direction: column;
-        align-items: center;
         justify-content: center;
+        gap: 1rem;
     }
 }
 
-body > section > h1{
+.texts{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.texts h1{
     font-size: 2.5rem;
-    font-family: var(--hand);
+    font-family: var(--vibes);
     color: var(--theme);
-    filter: var(--shadow);
+    /* filter: var(--shadow); */
+    /* text-shadow: -4px 3px 0px #007780; /* Firefox 3.5+, Opera 9+, Safari 1+, Chrome, IE10 */
+    /* filter: progid:DXImageTransform.Microsoft.Glow(Color=#ffffff,Strength=1); IE<10 */ */
+}
+.texts p{
+    color: #ccc;
+}
+@media only screen and (max-width: 900px){
+    .texts p{
+        display: none;
+    }
 }
 
 @keyframes valor{
@@ -207,7 +235,7 @@ main .operacoes .operacao{
 }
 
 footer{
-    background: black;
+    background: #111;
     width: 100%;
     color: #ccc;
     display: flex;

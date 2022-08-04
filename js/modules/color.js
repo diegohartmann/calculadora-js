@@ -18,7 +18,7 @@ export const color = () => {
     const reseter = document.querySelector('#theme-picker i.reseter');
     reseter.addEventListener('click', ()=>{
         colorPicker.value = '#ff6600'
-        localStorage.setItem('theme', '#1dca99')
+        localStorage.setItem('theme', '#ff6600')
         document.documentElement.style.setProperty('--theme', '#ff6600');
     })
 }
